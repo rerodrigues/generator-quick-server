@@ -70,11 +70,60 @@ module.exports = Generator.extend({
         name: 'bower',
         message: 'Use bower:',
         default: true
+      },
+      {
+        type: 'confirm',
+        name: 'mobile',
+        message: 'Include assets for mobile? (App icons, manifest, etc):',
+        default: false
+      },
+      {
+        type: 'list',
+        name: 'color',
+        message: 'Choose mobile UI color:',
+        choices: [
+          { name: chalk.white('White'), value: '#FFFFFF' },
+          { name: chalk.inverse.gray('Gray'), value: '#808080' },
+          { name: chalk.inverse.black('Black'), value: '#000000' },
+          { name: chalk.red('Red'), value: '#FF0000' },
+          { name: chalk.yellow('Yellow'), value: '#FFFF00' },
+          { name: chalk.green('Green'), value: '#008000' },
+          { name: chalk.cyan('Cyan'), value: '#00FFFF' },
+          { name: chalk.blue('Blue'), value: '#0000FF' },
+          { name: chalk.magenta('Magenta'), value: '#FF00FF' },
+          { type: 'separator' },
+          { name: 'Other: (specify):', value: 'other' },
+          { type: 'separator' }
+        ],
+        when: function (answers) {
+          return answers.mobile;
+        }
+      },
+      {
+        type: 'input',
+        name: 'otherColor',
+        message: 'Other Color (in hex):',
+        when: function(answers){
+          return answers.color === 'other';
+        }
+      },
+      {
+        type: 'confirm',
+        name: 'moboIcons',
+        message: 'Include dummy app icons images?',
+        default: false,
+        when: function (answers) {
+          return answers.mobile;
+        }
       }
     ];
 
     return this.prompt(prompts).then(function (props) {
       // To access props later use this.props.someAnswer;
+      if (props.otherColor) {
+        props.color = props.otherColor;
+      }
+
       this.props = props;
       this.config.set(props);
     }.bind(this));
@@ -155,6 +204,26 @@ module.exports = Generator.extend({
         this.destinationPath('app/index.html'),
         this.props
       );
+
+      if (this.props.mobile) {
+        this.fs.copyTpl(
+          this.templatePath('_optional/app/manifest.json'),
+          this.destinationPath('app/manifest.json'),
+          this.props
+        );
+        this.fs.copyTpl(
+          this.templatePath('_optional/app/browserconfig.xml'),
+          this.destinationPath('app/browserconfig.xml'),
+          this.props
+        );
+      }
+
+      if (this.props.mobile && this.props.moboIcons) {
+        this.fs.copy(
+          this.templatePath('_optional/app/assets/img/ico'),
+          this.destinationPath('app/assets/img/ico')
+        );
+      }
     },
 
     // Install Dependencies
