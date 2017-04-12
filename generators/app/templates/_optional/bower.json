@@ -1,0 +1,23 @@
+{
+  "name": "<%= name %>",
+  "description": "<%= description %>",
+  "main": "app/index.html",
+  "authors": [
+    "<%= authorName %> <<%= authorEmail %>> (<%= authorSite %>)"
+  ],
+  "license": "<%= license %>",
+  "private": "<%= private === true %>",
+<% if(homepage) { %>
+  "homepage": "<%= homepage %>",
+<% } %>
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./app/assets/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
