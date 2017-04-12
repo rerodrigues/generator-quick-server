@@ -1,0 +1,18 @@
+@mixin ir {
+  display: block;
+  float: left;
+  font-size: 1px;
+  text-indent: -9000px;
+}
+
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: ' '; // 1
+    display: table; // 2
+  }
+
+  &::after {
+    clear: both;
+  }
+}

@@ -1,0 +1,5 @@
+app/assets/css/*.css
+app/assets/js/*.min.js
+
+node_modules
+app/assets/libs
