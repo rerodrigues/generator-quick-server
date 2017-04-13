@@ -1,4 +1,4 @@
-# generator-quick-server [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-quick-server
 > A small server boilerplate for quick and easy application prototyping
 
 _Generator Quick-server_ comes with all you may need to easily start a development environment and focus your efforts only on your application development.
@@ -37,26 +37,18 @@ npm start
 
 A new browser window will open, indicating that everything went OK.
 
-## Included tecnologies/tools
+## Included technologies/tools
 
-*   ES6 (ES2015) support _(using Babel)_
-*   Frontend dependency management _(using Bower)_
-*   Javascript code quality and compliance check _(using ESLint and ESLint-airbnb)_
-*   Local static server _(using Connect)_
-*   Live-reload for static files
-*   Javascript minification _(using Uglify)_
-*   Public URL exposure _(using Localtunnel)_
-*   Notification system
-*   Sass compiler _(using libsass)_
-*   Sass Code Quality and compliace validator _(using Sass-lint)_
-
-
-## Getting To Know Yeoman
-
-*   Yeoman has a heart of gold.
-*   Yeoman is a person with feelings and opinions, but is very easy to work with.
-*   Yeoman can be too opinionated at times but is easily convinced not to be.
-*   Feel free to [learn more about Yeoman](http://yeoman.io/).
+*   ES6 (ES2015) support _([Babel][babel-url], [grunt-babel][grunt-babel-url])_
+*   Frontend dependency management _([Bower][bower-url])_
+*   Javascript code quality and compliance check _([ESLint][eslint-url], [eslint-config-airbnb][eslint-config-airbnb-url], [grunt-eslint][grunt-eslint-url])_
+*   Local static server _([Connect][connect-url], [grunt-contrib-connect][grunt-contrib-connect-url])_
+*   Automatic files recompilation and live-reload for static files _([grunt-contrib-watch][grunt-contrib-watch-url])_
+*   Javascript minification _([Uglify][uglify-url], [grunt-contrib-uglify][grunt-contrib-uglify-url])_
+*   Public URL exposure _([Localtunnel][localtunnel-url], [grunt-localtunnel-me][grunt-localtunnel-me-url])_
+*   Notification system _([grunt-notify][grunt-notify-url])_
+*   Sass compiler _([LibSass][libsass-url], [grunt-sass][grunt-sass-url])_
+*   Sass Code Quality and compliance validator _([Sass Lint][sass-lint-url], [grunt-sass-lint][grunt-sass-lint-url])_
 
 ## License
 
@@ -69,3 +61,22 @@ MIT © [Renato Rodrigues](https://github.com/rerodrigues)
 [travis-url]: https://travis-ci.org/rerodrigues/generator-quick-server
 [daviddm-image]: https://david-dm.org/rerodrigues/generator-quick-server.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/rerodrigues/generator-quick-server
+
+[babel-url]: http://babeljs.io/
+[grunt-babel-url]: https://github.com/babel/grunt-babel
+[bower-url]: https://bower.io/
+[eslint-url]: http://eslint.org/
+[eslint-config-airbnb-url]: https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
+[grunt-eslint-url]: https://github.com/sindresorhus/grunt-eslint
+[connect-url]: https://github.com/senchalabs/connect
+[grunt-contrib-connect-url]: https://github.com/gruntjs/grunt-contrib-connect
+[grunt-contrib-watch-url]: https://github.com/gruntjs/grunt-contrib-watch
+[uglify-url]: https://github.com/mishoo/UglifyJS2
+[grunt-contrib-uglify-url]: https://github.com/gruntjs/grunt-contrib-uglify
+[localtunnel-url]: https://localtunnel.github.io/www/
+[grunt-localtunnel-me-url]: https://github.com/simshanith/grunt-localtunnel-me
+[grunt-notify-url]: https://github.com/dylang/grunt-notify
+[libsass-url]: http://sass-lang.com/libsass
+[grunt-sass-url]: https://github.com/sindresorhus/grunt-sass
+[sass-lint-url]: https://github.com/sasstools/sass-lint
+[grunt-sass-lint-url]: https://github.com/sasstools/grunt-sass-lint
