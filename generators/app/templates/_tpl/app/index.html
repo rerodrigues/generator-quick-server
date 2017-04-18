@@ -48,9 +48,34 @@
 </head>
 
 <body>
-    <h1>Welcome to <%= name %></h1>
+    <!-- Content begin -->
 
-    <h2><%= description %></h2>
+    <!-- replace the lines between this line -->
+    <h1>Welcome to <%= name %></h1>
+    <h3>Customizing it:</h3>
+    <dl>
+        <dt>HTML:</dt>
+        <dd>Edit the main HTML file located at <em>app/index.html</em> <small>(this file)</small></dd>
+        <dt>CSS:</dt>
+        <dd>Edit the main SCSS file located at <em>app/assets/scss/layout.scss</em> or create your own .scss file and include it in <em>app/assets/scss/app.scss</em></small></dd>
+        <dt>JS:</dt>
+        <dd>Edit the main JS file located at <em>app/assets/js/app.src.js</em> or create your own .src.js file and include it manually in <em>app/index.html</em></small></dd>
+    </dl>
+    <footer>Generated with <a href="https://github.com/rerodrigues/generator-quick-server">generator-quick-server</a> by <a href="https://about.me/renato.rodrigues">Renato Rodrigues</a></footer>
+
+    <style>
+        h1 { font-size: 40px; margin-bottom: 30px; }
+        h3 { font-size: 20px; margin-bottom: 12px; }
+        dl { font-size: 14px; }
+        dt { font-weight: bold; margin-top: 12px;}
+        footer { margin-top: 50px; font-size: 10px; font-style: italic; }
+        body { width: 80%; margin-left: 50%; margin-top: 2%; transform: translateX(-50%);
+               border: 1px solid #BBB; padding: 5%; }
+    </style>
+
+    <!-- and this line with your content -->
+
+    <!-- Content end -->
 
     <script src="assets/js/app.min.js"></script>
 </body>
