@@ -50,6 +50,21 @@ A new browser window will open, indicating that everything went OK.
 *   Sass compiler _([LibSass][libsass-url], [grunt-sass][grunt-sass-url])_
 *   Sass Code Quality and compliance validator _([Sass Lint][sass-lint-url], [grunt-sass-lint][grunt-sass-lint-url])_
 
+## Release History
+
+*   1.0.0 _\[18/04/2017\]_
+    *   Initial version
+
+## Future plans
+
+*   Add input validation and required fields
+*   Make bower option a sub-generator
+*   Make localtunnel option a sub-generator
+*   Make mobile assets a sub-generator
+*   Make dummy app icon images a sub-generator
+*   Option to choose CSS pre-processor (Sass, Less, Stylus)
+*   Add tests
+
 ## License
 
 MIT © [Renato Rodrigues](https://github.com/rerodrigues)
