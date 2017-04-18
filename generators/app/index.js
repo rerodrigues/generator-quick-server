@@ -82,18 +82,14 @@ module.exports = Generator.extend({
         name: 'color',
         message: 'Choose mobile UI color:',
         choices: [
-          { name: chalk.white('White'), value: '#FFFFFF' },
-          { name: chalk.inverse.gray('Gray'), value: '#808080' },
-          { name: chalk.inverse.black('Black'), value: '#000000' },
-          { name: chalk.red('Red'), value: '#FF0000' },
-          { name: chalk.yellow('Yellow'), value: '#FFFF00' },
-          { name: chalk.green('Green'), value: '#008000' },
-          { name: chalk.cyan('Cyan'), value: '#00FFFF' },
-          { name: chalk.blue('Blue'), value: '#0000FF' },
-          { name: chalk.magenta('Magenta'), value: '#FF00FF' },
-          { type: 'separator' },
-          { name: 'Other: (specify):', value: 'other' },
-          { type: 'separator' }
+          {name: 'White', value: '#FFFFFF'},
+          {name: 'Light Gray', value: '#C0C0C0'},
+          {name: 'Dark Gray', value: '#808080'},
+          {name: 'Black', value: '#000000'},
+          {name: 'NONE', value: 'none'},
+          {type: 'separator'},
+          {name: 'Other (specify):', value: 'other'},
+          {type: 'separator'}
         ],
         when: function (answers) {
           return answers.mobile;
@@ -103,7 +99,7 @@ module.exports = Generator.extend({
         type: 'input',
         name: 'otherColor',
         message: 'Other Color (in hex):',
-        when: function(answers){
+        when: function (answers) {
           return answers.color === 'other';
         }
       },
@@ -132,7 +128,7 @@ module.exports = Generator.extend({
   // Writing Logic here
   writing: {
     // Copy the configuration files
-    config: function() {
+    config: function () {
       this.fs.copy(
         this.templatePath('_static/grunt/'),
         this.destinationPath('grunt/')
@@ -193,7 +189,7 @@ module.exports = Generator.extend({
     },
 
     // Copy application files
-    app: function() {
+    app: function () {
       this.fs.copy(
         this.templatePath('_static/app/'),
         this.destinationPath('app/')
