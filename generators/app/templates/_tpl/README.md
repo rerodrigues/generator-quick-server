@@ -1,13 +1,15 @@
-### <%= name %>
+## <%= name %>
 
 > <%= description %>
 
-#### usage:
+### Using:
 
--   Install [Node](https://nodejs.org/en/)
+-   Install [Node JS](https://nodejs.org/en/)
 
-```sh
+```bash
 npm install
 
 npm start
 ```
+
+Generated with [generator-quick-server](https://github.com/rerodrigues/generator-quick-server) by [Renato Rodrigues](https://about.me/renato.rodrigues)
