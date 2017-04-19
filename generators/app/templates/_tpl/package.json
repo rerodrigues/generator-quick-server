@@ -25,7 +25,7 @@
   "homepage": "<%= homepage %>",
 <% } %>
   "devDependencies": {
-    "babel": "^6.23.0",
+    "babel-cli": "^6.23.0",
     "babel-preset-es2015": "^6.22.0",
 <% if (bower) { %>
     "bower": "^1.8.0",
