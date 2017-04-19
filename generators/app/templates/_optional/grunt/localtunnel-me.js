@@ -2,7 +2,6 @@ module.exports = function(grunt) {
     grunt.config('localtunnel', {
         server: {
             options: {
-                subdomain: '<%= name.toLowerCase().replace(/\s/g, "_") %>',
                 local_host: 'localhost',
                 port: 8000,
                 /* eslint-disable no-unused-vars*/
