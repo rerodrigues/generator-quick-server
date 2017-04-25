@@ -1,11 +1,11 @@
 {
   "name": "generator-quick-server",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A small server boilerplate for quick and easy application prototyping",
   "homepage": "https://github.com/rerodrigues/generator-quick-server",
   "author": {
     "name": "Renato Rodrigues",
-    "email": "renato.sp@gmail.com",
+    "email": "renato@renatorodrigues.com",
     "url": "https://github.com/rerodrigues"
   },
   "files": [

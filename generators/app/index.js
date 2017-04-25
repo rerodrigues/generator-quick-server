@@ -181,8 +181,8 @@ module.exports = Generator.extend({
 
       if (this.props.expose) {
         this.fs.copyTpl(
-          this.templatePath('_optional/grunt/localtunnel-me.js'),
-          this.destinationPath('grunt/localtunnel-me.js'),
+          this.templatePath('_optional/grunt/localtunnel-client.js'),
+          this.destinationPath('grunt/localtunnel-client.js'),
           this.props
         );
       }
