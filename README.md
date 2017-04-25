@@ -1,4 +1,4 @@
-# generator-quick-server
+# generator-quick-server [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > A small server boilerplate for quick and easy application prototyping
 
 _Generator Quick-server_ comes with all you may need to easily start a development environment and focus your efforts only on your application development.
@@ -63,6 +63,8 @@ A new browser window will open, indicating that everything went OK.
 *   Make mobile assets a sub-generator
 *   Make dummy app icon images a sub-generator
 *   Option to choose CSS pre-processor (Sass, Less, Stylus)
+*   Add Editor Config
+*   Add keyword options
 *   Add tests
 
 ## License
@@ -72,8 +74,6 @@ MIT © [Renato Rodrigues](https://github.com/rerodrigues)
 
 [npm-image]: https://badge.fury.io/js/generator-quick-server.svg
 [npm-url]: https://npmjs.org/package/generator-quick-server
-[travis-image]: https://travis-ci.org/rerodrigues/generator-quick-server.svg?branch=master
-[travis-url]: https://travis-ci.org/rerodrigues/generator-quick-server
 [daviddm-image]: https://david-dm.org/rerodrigues/generator-quick-server.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/rerodrigues/generator-quick-server
 
